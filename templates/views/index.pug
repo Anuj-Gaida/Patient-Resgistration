@@ -1,0 +1,67 @@
+doctype html
+head
+  link(rel="stylesheet", href="css/style.css")
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  // --===== Iconscout CSS =====
+  link(rel='stylesheet' href='https://unicons.iconscout.com/release/v4.0.0/css/line.css')
+  title Patient Registration
+.container
+  header Registration
+  form(action='/index' method='POST')
+    .form.first
+      .details.personal
+        span.title Personal Details
+        .fields
+          .input-field
+            label Full Name
+            input.form-holder(type='text' placeholder='Enter your name' required='' name='fullName')
+          .input-field
+            label Date of Birth
+            input.form-holder(type='date' placeholder='Enter birth date' required='' name='dateOfBirth')
+          .input-field
+            label Email
+            input.form-holder(type='text' placeholder='Enter your email' required='' name='email')
+          .input-field
+            label Personal Number
+            input.form-holder(type='number' placeholder='Enter personal number' required='' name='personalNumber')
+          .input-field
+            label Gender
+            select(required='' name='gender')
+              option(disabled='' selected='') Select gender
+              option Male
+              option Female
+              option Others
+          .input-field
+            label Phone number
+            input.form-holder(type='text' placeholder='Enter your phone number' name='phoneNumber')
+      .details.address
+        span.title Address Details
+        .fields
+          .input-field
+            label City
+            input.form-holder(type='text' placeholder='Enter your city' required='' name='city')
+          .input-field
+            label Municipality
+            input.form-holder(type='text' placeholder='Enter your municipality' required='' name='municipality')
+          .input-field
+            label Ward number
+            input.form-holder(type='number' placeholder='Enter your ward number' required='' name='wardNumber')
+        .department.details
+          span.title Department
+          .fields
+            .input-fields
+              label Choose a department
+              select(required='' name='department')
+                option(disabled='' selected='') Select department
+                option surgery
+                option gynaecology
+                option obstetrics
+                option  paediatrics
+                option eye
+                option dental
+                option orthopaedics
+                option neurology
+                option skin
+        input.btnRegister(type='submit' value='Register')
